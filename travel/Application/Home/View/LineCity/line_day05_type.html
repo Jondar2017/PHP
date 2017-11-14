@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游主页显示</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/line/line.css">
+    <script src="__PUBLIC__/Js/jquery.js"></script>
+</head>
+<body>
+<div class="head">
+    <div class="head_con">
+        <div class="logo"><a href="#"><img src="__PUBLIC__/Images/tuniu.jpg" alt=""></a></div>
+    </div>
+</div>
+<div class="menu">
+    <div class="menu_con">
+        <div class="login_con">
+            <i></i>
+            <div class="user">
+                <a href="#">注册</a>
+                &nbsp;|&nbsp;
+                <a href="#">登录</a>
+                <div class="message">
+                        <span>
+                            <a href="#" target="_blank" class="btn_login">登录途牛</a>
+                            <a href="#" target="_blank">查看订单</a>
+                            <a href="#" target="_blank">手机查订单</a>
+                        </span>
+                </div>
+            </div>
+            <b>
+                我的途牛
+                <s id="s1"></s>
+            </b>
+        </div>
+        <div class="login_content">
+                <span class="welcome">
+                    欢迎登录途牛旅游网
+                </span>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $(".login_con").hover(
+                function(){
+                    $(".menu_con .user .message").css("display", "block");
+                    $(".menu_con .login_con s").css("transform", "rotate(180deg)")
+                },
+                function(){
+                    $(".menu_con .user .message").css("display", "none");
+                    $(".menu_con .login_con s").css("transform", "rotate(0)")
+                }
+        );
+    });
+</script>
+<div class="head_city">
+    <div class="city_top">
+        <foreach name="cities" item="v">
+            <h1>
+                <strong>{$v.name}</strong>
+                <span>{$v.name_p}</span>
+            </h1>
+            <div class="slogan">
+                <a href="">
+                    <img src="__PUBLIC__/Images/img_v1/slogan.png" alt="">
+                </a>
+            </div>
+            <div class="weather">
+                <p>{$v.content}</p>
+            </div>
+        </foreach>
+        <div class="go">
+                <span class="want J-want">
+                    <i></i>
+                    <p>
+                        <span>想去</span>
+                        <em>520</em>
+                    </p>
+                </span>
+                <span class="been J-been">
+                    <i></i>
+                    <p>
+                        <span>去过</span>
+                        <em>520</em>
+                    </p>
+                </span>
+        </div>
+        <div class=".j_menu_fixed"></div>
+        <div class="city_menu">
+            <ul>
+                <li><a href="{:U('Home/Index/index')}">主页</a></li>
+                <li><a href="{:U('Home/Sign/index')}">景点</a></li>
+                <li class="on"><a href="{:U('Home/Line/Index')}">线路</a></li>
+                <li><a href="">美食</a></li>
+                <li><a href="">住宿</a></li>
+                <li><a href="">交通</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $(".go .want").hover(
+                function(){
+                    $(".go .want i").css("background-position", "0px -34px");
+                    $(".go .want span").html("我想去");
+                },
+                function(){
+                    $(".go .want i").css("background-position", "0px 0px");
+                    $(".go .want span").html("想去");
+                }
+        );
+        $(".go .been").hover(
+                function(){
+                    $(".go .been i").css("background-position", "-34px -34px");
+                    $(".go .been span").html("我去过");
+                },
+                function(){
+                    $(".go .been i").css("background-position", "-34px 0px");
+                    $(".go .been span").html("去过");
+                }
+        )
+    });
+</script>
+<div class="content mt20">
+    <div class="box_list">
+        <div class="box_change">
+            <div class="change_con">
+                <dl>
+                    <dt>行程天数：</dt>
+                    <dd>
+                        <a href="{:U('Home/LineCity/index?city_name='.$city_name)}">全部</a>
+                        <foreach name="days" item="v">
+                            <if condition="$v.days_id eq 5">
+                                <a href="{:U('Home/LineCity/get_days?days_id='.$v['days_id'].'&city_name='.$city_name)}" class="on">五日游以上</a>
+                                <else/><a href="{:U('Home/LineCity/get_days?days_id='.$v['days_id'].'&city_name='.$city_name)}">{$v.days_id}日游</a>
+                            </if>
+
+                        </foreach>
+                    </dd>
+                </dl>
+                <!--<dl>-->
+                <!--<dt>&emsp;目的地：</dt>-->
+                <!--<dd class="choice choicel open" style="height:26px;">-->
+                <!--<volist name="cities" id="vo">-->
+                <!--<a href="">{$vo}</a>-->
+                <!--</volist>-->
+                <!--</dd>-->
+                <!--<dd class="btn">展开<i></i></dd>-->
+                <!--</dl>-->
+                <!--<dl>-->
+                    <!--<dt>出游方式：</dt>-->
+                    <!--<dd>-->
+                        <!--<a href="{:U('Home/LineCity/index?city_name='.$city_name)}" class="on">不限</a>-->
+                        <!--<a href="">跟团游</a>-->
+                    <!--</dd>-->
+                <!--</dl>-->
+            </div>
+            <div class="change_ing">
+                <dl>
+                    <dt>您已选择：</dt>
+                    <dd>
+                        <a href="{:U('Home/LineCity/index?city_name='.$city_name)}" class="now_color">五日游以上<i></i></a>
+                        <a href="{:U('Home/LineCity/index?city_name='.$city_name)}" class="btn_now">重新筛选</a>
+                    </dd>
+                </dl>
+            </div>
+            <script>
+                $(function(){
+                    $(".change_con dd.btn").hover(
+                            function(){
+                                $(this).css({"background":"#f70", "color":"#fff"});
+                                $(this).find("i").css("border-top","4px solid #fff");
+
+                            },
+                            function(){
+                                $(this).css({"background":"#c9c9c9", "color":"#666"});
+                                $(this).find("i").css("border-top","4px solid #666");
+                            }
+                    );
+                    var fli_click = 0;
+                    $(".change_con dd.btn").click(
+                            function(){
+                                var pi = "<i></i>";
+                                if (fli_click++ % 2 === 0) {
+                                    $(this).html("收起");
+                                    $(this).append(pi);
+                                    $(this).find("i").css({"transform":"rotate(180deg)","border-top":"4px solid #fff"});
+                                    $(this).prev().css("height", "auto");
+                                } else {
+                                    $(this).html("展开");
+                                    $(this).append(pi);
+                                    $(this).find("i").css({"transform":"rotate(0deg)","border-top":"4px solid #fff"});
+                                    $(this).prev().css("height", "26px");
+                                }
+                            }
+                    );
+                });
+
+            </script>
+        </div>
+        <div class="xianlu_list spread">
+            <div class="hot"></div>
+            <ul>
+                <foreach name="line" item="v">
+                    <li id="line_418176">
+                        <div class="tu">
+                            <a href="" target="_blank">
+                                <img src="__PUBLIC__/Images/index/{$v.image_path}" alt="{$v.recomend_des}" width="120" height="90">
+                            </a>
+                            <a href="" class="btn_add"></a>
+                        </div>
+                        <div class="xl_con">
+                            <div class="xl_type">
+                                <div class="title">
+                                    <i class="i0"></i>
+                                    <a href="" target="_blank" data="418176">{$v.recomend_des}</a>
+                                </div>
+                                <div class="lxs">
+                                    <i></i>
+                                    <a href="" target="_blank">广东和平旅行社</a>
+                                </div>
+                            </div>
+                            <div class="xl_num">
+                            <span class="price">
+                                ￥<em>{$v.recomend_price}</em>起
+                                <del>省<b>{$v.recomend_discount}</b>元</del>
+                            </span>
+                                <a href="{:U('Home/Line/desc','id='.$v['recomend_id'])}" class="btn_go" target="_blank"></a>
+                                <span class="guanzhu">&nbsp;&nbsp;{$v.recomend_focus}人关注</span>
+                            </div>
+                        </div>
+                        <div class="xl_other">
+                            <span>
+                                <em>行程天数</em>{$v.days_id}天
+                            </span>
+                            <span>
+                                <em>出发日期</em>天天发团
+                            </span>
+                            <span>
+                                <em>往返交通</em>汽车去汽车回
+                            </span>
+                            <span>
+                                <em>品质服务</em>无购物无自费
+                            </span>
+                        </div>
+                    </li>
+                </foreach>
+            </ul>
+        </div>
+        <div class="page">
+            <div class="page_con">
+                <!--<span class="active">1</span>-->
+                {$page}
+                <i class="triangle"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

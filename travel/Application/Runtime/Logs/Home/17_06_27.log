@@ -1,0 +1,60 @@
+[ 2017-06-27T00:43:04+08:00 ] ::1 /travel/index.php/Home/Food/like?food_id=1&like=7718
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `travel_food` [ RunTime:0.0114s ]
+SQL: UPDATE `travel_food` SET `food_taste`='7718' WHERE `food_id` = 1 [ RunTime:0.0035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2017-06-27T00:44:53+08:00 ] ::1 /travel/index.php/Home/Food/like?food_id=1&like=7719
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `travel_food` [ RunTime:0.0114s ]
+SQL: UPDATE `travel_food` SET `food_taste`='7719' WHERE `food_id` = 1 [ RunTime:0.0035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000742s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2017-06-27T00:46:02+08:00 ] ::1 /travel/index.php/Home/Food/like?food_id=88&like=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `travel_food` [ RunTime:0.0112s ]
+SQL: UPDATE `travel_food` SET `food_taste`='1' WHERE `food_id` = 88 [ RunTime:0.0074s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000829s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000919s ]
+
+[ 2017-06-27T00:46:20+08:00 ] ::1 /travel/index.php/Home/Food/like?food_id=88&like=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+SQL: SHOW COLUMNS FROM `travel_food` [ RunTime:0.0114s ]
+SQL: UPDATE `travel_food` SET `food_taste`='2' WHERE `food_id` = 88 [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000739s ]
+
+[ 2017-06-27T00:46:58+08:00 ] ::1 /travel/index.php/Home/Food/like?food_id=88&like=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `travel_food` [ RunTime:0.0105s ]
+SQL: UPDATE `travel_food` SET `food_taste`='3' WHERE `food_id` = 88 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000808s ]
+
+[ 2017-06-27T00:54:20+08:00 ] ::1 /travel/index.php/Home/Food/like?food_id=1&like=7720
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+SQL: SHOW COLUMNS FROM `travel_food` [ RunTime:0.0113s ]
+SQL: UPDATE `travel_food` SET `food_taste`='7720' WHERE `food_id` = 1 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+

@@ -1,0 +1,27 @@
+[ 2017-06-23T11:28:57+08:00 ] ::1 /travel/index.php/Home/Transport//index.html
+ERR: 无法加载控制器:Transport
+
+[ 2017-06-23T20:54:35+08:00 ] ::1 /travel/index.php/Home/Order/index/room_id/2/hotel_id/OrderController.class.php
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001232s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0075s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_addr,city.name FROM travel_hotel hotel,travel_city city WHERE ( hotel.hotel_city_id = city.id and hotel.hotel_id = 0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `travel_room` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `travel_room` WHERE `room_id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000354s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2017-06-23T22:38:09+08:00 ] ::1 /travel/index.php/Home/OrderInfo/css-table.css
+ERR: 非法操作:css-table.css
+

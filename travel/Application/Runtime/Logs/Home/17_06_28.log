@@ -1,0 +1,546 @@
+[ 2017-06-28T01:00:36+08:00 ] ::1 /travel/index.php/Home/Food/search.html
+ERR: 模板不存在:./Application/Home/View/Food/search.html
+
+[ 2017-06-28T19:57:03+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics/city_id/1/hotel_type/%E7%BB%8F%E6%B5%8E%E5%9E%8B.html?region_name=%E8%8D%94%E6%B9%BE%E5%8C%BA
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001327s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0122s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0089s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000961s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001130s ]
+
+[ 2017-06-28T19:57:05+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics/city_id/1/hotel_type/%E7%BB%8F%E6%B5%8E%E5%9E%8B.html?region_name=%E5%A4%A9%E6%B2%B3%E5%8C%BA
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001420s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0119s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0095s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060780s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000900s ]
+
+[ 2017-06-28T20:18:22+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=5&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `travel_hotel` WHERE `region_id` = 5  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0114s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001208s ]
+
+[ 2017-06-28T20:18:29+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=5&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `travel_hotel` WHERE `region_id` = 5  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0103s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_image D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 189 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000901s ]
+
+[ 2017-06-28T20:19:03+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=2&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0133s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0104s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001469s ]
+
+[ 2017-06-28T20:19:04+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0149s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0089s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000945s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001115s ]
+
+[ 2017-06-28T20:21:13+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics.html?region_id=3&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+
+[ 2017-06-28T20:22:22+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics/city_id/1/hotel_type/%E7%BB%8F%E6%B5%8E%E5%9E%8B.html?region_id=3&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+
+[ 2017-06-28T20:29:24+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics/city_id/1/hotel_type/%E7%BB%8F%E6%B5%8E%E5%9E%8B.html?region_id=2&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0119s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064489s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001543s ]
+
+[ 2017-06-28T20:29:27+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics/city_id/1/hotel_type/%E7%BB%8F%E6%B5%8E%E5%9E%8B.html?region_id=3&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0118s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0103s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001877s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001314s ]
+
+[ 2017-06-28T20:30:32+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=2&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0117s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060571s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001653s ]
+
+[ 2017-06-28T20:37:37+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0129s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0084s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001131s ]
+
+[ 2017-06-28T20:38:04+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0117s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0092s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001673s ]
+
+[ 2017-06-28T20:43:23+08:00 ] ::1 /travel/index.php/Home/Hotel/region?region_id=2&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+
+[ 2017-06-28T20:43:47+08:00 ] ::1 /travel/index.php/Home/Hotel/region.html?region_id=2&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+
+[ 2017-06-28T20:45:27+08:00 ] ::1 /travel/index.php/Home/Hotel/region?region_id=1&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-06-28T20:47:14+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=2&city_id=1&hotel_type=%E7%BB%8F%E6%B5%8E%E5%9E%8B
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0128s ]
+SQL: SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '经济型' 
+            and hotel.hotel_city_id = 1 and hotel.hotel_id = intro.hotel_id ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `travel_city` [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `travel_city` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `travel_region` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `travel_region` WHERE `city_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+NOTIC: [8] Undefined index: hotel_addr D:\phpProject\travel\Application\Runtime\Cache\Home\03526e2d9d099c2a9d8173d57c1bd89b.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060439s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060561s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2017-06-28T20:54:43+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0116s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+
+[ 2017-06-28T20:55:50+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0128s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+
+[ 2017-06-28T20:57:05+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0152s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+
+[ 2017-06-28T20:59:33+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0150s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+
+[ 2017-06-28T21:01:04+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0115s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+
+[ 2017-06-28T21:03:25+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0114s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+
+[ 2017-06-28T21:07:25+08:00 ] ::1 /travel/index.php/Home/Hotel/region?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+
+[ 2017-06-28T21:08:15+08:00 ] ::1 /travel/index.php/Home/Hotel/region?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+
+[ 2017-06-28T21:08:18+08:00 ] ::1 /travel/index.php/Home/Hotel/region?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+
+[ 2017-06-28T21:18:15+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics?region_id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0113s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+
+[ 2017-06-28T21:44:21+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_economics/city_id/1/hotel_type/%E7%BB%8F%E6%B5%8E%E5%9E%8B.html
+ERR: 1146:Table 'db_travel.travel_intro' doesn't exist
+ [ SQL语句 ] : SELECT hotel.*,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_intro` `intro` WHERE ( hotel.hotel_id = intro.hotel_id and 
+                         hotel.region_id = 5 ) 
+

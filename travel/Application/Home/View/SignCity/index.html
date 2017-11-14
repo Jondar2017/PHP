@@ -1,0 +1,224 @@
+<include file="Food/base"/>
+<link rel="stylesheet" href="__PUBLIC__/Css/sign/sign.css">
+<div class="content mt20">
+    <div class="box_list">
+        <div class="box_change">
+            <div class="change_con">
+                <dl>
+                    <dt>景点星级：</dt>
+                    <dd>
+                        <a href="" class="on">全部</a>
+                        <foreach name="level" item="v">
+                            <a href="{:U('Home/SignCity/get_city_level?level_id='.$v['level_id'].'&view_city='.$view_city)}">{$v.level_name}</a>
+                        </foreach>
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+        <div class="city_spots">
+            <div class="first_con"></div>
+            <div class="city_spots_list">
+                <ul>
+                    <li class="first">
+                        <foreach name="view_top" item="v">
+                            <a href="{:U('Home/Sign/desc','view_id='.$v['view_id'])}" class="pic">
+                                <div class="icon">
+                                    <sup class="t1">NO.1</sup>
+                                </div>
+                                <img src="__PUBLIC__/Images/view/{$v.images_path}" alt="{$v.view_name}" data-original="__PUBLIC__/Images/view/{$v.images_path}" width="287" height="190" style="display: block;">
+                                <div class="title">
+                                    <b>{$v.view_name}</b>
+                                    <span>{$v.view_want}人想去</span>
+                                </div>
+                            </a>
+                            <div class="text_con">
+                                <p>
+                                    {$v.view_content|msubstr=0,120}
+                                </p>
+                                <div class="type">
+                                    <dl>
+                                        <dt>景点等级：</dt>
+                                        <dd>
+                                            <b>{$v.view_level}&nbsp;</b>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>开放时间：</dt>
+                                        <dd>{$v.view_start_time}-{$v.view_end_time}</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>景点地址：</dt>
+                                        <dd>{$v.view_addr}</dd>
+                                    </dl>
+                                </div>
+                                <div class="num">
+                                <span class="price">
+                                    途牛价：￥<b>{$v.view_price}</b>起
+                                </span>
+                                    <span class="sale">{$v.view_discount}</span>
+                                    <a href="{:U('Home/Sign/desc','view_id='.$v['view_id'])}" class="btn">购买门票</a>
+                                </div>
+                            </div>
+                        </foreach>
+                    </li>
+                    <li class="">
+                        <foreach name="view_second" item="v">
+                            <a href="{:U('Home/Sign/desc','view_id='.$v['view_id'])}" class="pic">
+                                <div class="icon">
+                                    <sup class="t2">NO.2</sup>
+                                </div>
+                                <img src="__PUBLIC__/Images/view/{$v.images_path}" alt="{$v.view_name}" data-original="__PUBLIC__/Images/view/{$v.images_path}" width="287" height="190"  style="display: block;">
+                                <div class="title">
+                                    <b>{$v.view_name}</b>
+                                    <span>{$v.view_want}人想去</span>
+                                </div>
+                            </a>
+                            <div class="text_con">
+                                <p>
+                                    {$v.view_content|msubstr=0,35}
+                                </p>
+
+                                <div class="num">
+                                <span class="price">
+                                   ￥<b>{$v.view_price}</b>起
+                                </span>
+                                    <span class="sale">{$v.view_discount}</span>
+                                    <a href="{:U('Home/Sign/desc','view_id='.$v['view_id'])}" class="btn">购买门票</a>
+                                </div>
+                            </div>
+                        </foreach>
+
+                    </li>
+                    <li class="">
+                        <foreach name="view_third" item="v">
+                            <a href="{:U('Home/Sign/desc','view_id='.$v['view_id'])}" class="pic">
+                                <div class="icon">
+                                    <sup class="t3">NO.3</sup>
+                                </div>
+                                <img src="__PUBLIC__/Images/view/{$v.images_path}" alt="{$v.view_name}" data-original="__PUBLIC__/Images/view/{$v.images_path}" width="287" height="190"  style="display: block;">
+                                <div class="title">
+                                    <b>{$v.view_name}</b>
+                                    <span>{$v.view_want}人想去</span>
+                                </div>
+                            </a>
+                            <div class="text_con">
+                                <p>
+                                    {$v.view_content|msubstr=0,35}
+                                </p>
+
+                                <div class="num">
+                                <span class="price">
+                                   ￥<b>{$v.view_price}</b>起
+                                </span>
+                                    <span class="sale">{$v.view_discount}</span>
+                                    <a href="{:U('Home/Sign/desc','view_id='.$v['view_id'])}" class="btn">购买门票</a>
+                                </div>
+
+                            </div>
+                        </foreach>
+                    </li>
+                    <foreach name="views" item="v">
+                        <li class="">
+                            <a href="{:U('Home/sign/desc?view_id='.$v['view_id'])}" class="pic">
+                                <div class="icon">
+                                </div>
+                                <img src="__PUBLIC__/Images/view/{$v.images_path}" alt="{$v.view_name}" data-original="__PUBLIC__/Images/view/{$v.images_path}" width="287" height="190" style="display: block;">
+                                <div class="title">
+                                    <b>{$v.view_name}</b>
+                                    <span>{$v.view_want}人想去</span>
+                                </div>
+                            </a>
+                            <div class="text_con">
+                                <p>
+                                    {$v.view_content|msubstr=0,35}
+                                </p>
+                                <div class="num">
+                                    <a href="{:U('Home/sign/desc'), 'view_id='.$v['view_id']}" class="btn btn2">查看详情</a>
+                                </div>
+
+                            </div>
+                        </li>
+                    </foreach>
+                </ul>
+            </div>
+        </div>
+        <div class="page">
+            <div class="page_con">
+                <!--<span class="active">1</span>-->
+                {$page}
+                <i class="triangle"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="tit">
+            <strong>广东景点攻略</strong>
+        </div>
+        <div class="txt">
+            <ul>
+                <li>
+                    <a href="">世界之窗住宿指南</a>
+                </li>
+                <li>
+                    <a href="">广州塔旅游指南</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(function(){
+
+            $(".change_con dd.btn").hover(
+                    function(){
+                        $(this).css({"background":"#f70", "color":"#fff"});
+                        $(this).find("i").css("border-top","4px solid #fff");
+
+                    },
+                    function(){
+                        $(this).css({"background":"#c9c9c9", "color":"#666"});
+                        $(this).find("i").css("border-top","4px solid #666");
+                    }
+            );
+            var fli_click = 0;
+            $(".change_con dd#btn1").click(
+                    function(){
+                        var pi = "<i></i>";
+                        if (fli_click++ % 2 === 0) {
+                            $(this).html("收起");
+                            $(this).append(pi);
+                            $(this).find("i").css({"transform":"rotate(180deg)","border-top":"4px solid #fff"});
+                            $(this).prev().css("height", "auto");
+                        } else {
+                            $(this).html("展开");
+                            $(this).append(pi);
+                            $(this).find("i").css({"transform":"rotate(0deg)","border-top":"4px solid #fff"});
+                            $(this).prev().css("height", "26px");
+                        }
+                    }
+            );
+            $(".change_con dd#btn2").click(
+                    function(){
+                        var pi = "<i></i>";
+                        if (fli_click++ % 2 === 0) {
+                            $(this).html("收起");
+                            $(this).append(pi);
+                            $(this).find("i").css({"transform":"rotate(180deg)","border-top":"4px solid #fff"});
+                            $(this).prev().css("height", "auto");
+
+                        } else {
+                            $(this).html("展开");
+                            $(this).append(pi);
+                            $(this).find("i").css({"transform":"rotate(0deg)","border-top":"4px solid #fff"});
+                            $(this).prev().css("height", "26px");
+                        }
+                    }
+            );
+        });
+        $(function () {
+            $(".city_top .city_menu ul li:nth-child(2)").addClass("on");
+        });
+    </script>
+</div>
+</body>
+</html>

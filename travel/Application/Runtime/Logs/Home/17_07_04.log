@@ -1,0 +1,16 @@
+[ 2017-07-04T00:10:44+08:00 ] ::1 /travel/index.php/Home/order/order.html
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `travel_line_order` (`line_name`,`adult_price`,`child_price`,`total_price`,`adults`,`children`,`travel_type`,`line_id`,`username`,`phone`,`comments`,`start_time`) VALUES ('360度 广州一天经典线','230','115','230','1','0','跟团游','1','廖景达','18814095644','','2017-07-12')
+
+[ 2017-07-04T00:42:22+08:00 ] ::1 /travel/index.php/Home/Line/index.html
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-04T00:44:16+08:00 ] ::1 /travel/index.php/Home/Line/index.html
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-04T00:44:18+08:00 ] ::1 /travel/index.php/Home/Line/index.html
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-04T00:44:21+08:00 ] ::1 /travel/index.php/Home/Line/index.html
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+

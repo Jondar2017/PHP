@@ -1,0 +1,61 @@
+<include file="Common/base" id="2"/>
+<section class="rt_wrap content mCustomScrollbar">
+    <div class="rt_content">
+        <table id="travel">
+            <thead>
+            <tr>
+                <th scope="col" rowspan="2">酒店名称</th>
+                <th scope="col" colspan="9">订单详情</th>
+            </tr>
+            <tr>
+                <th scope="col">房间名称</th>
+                <th scope="col">房间数量</th>
+                <th scope="col">预订人姓名</th>
+                <th scope="col">入住日期</th>
+                <th scope="col">结束日期</th>
+                <th scope="col">总价</th>
+                <th scope="col">手机号码</th>
+                <th scope="col">修改</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="data" id="val">
+                <tr>
+                    <th scope="row">{$val.hotel_name}</th>
+                    <td>{$val.room_name}</td>
+                    <td>{$val.roomcount}</td>
+                    <td>{$val.name}</td>
+                    <td>{$val.startdate}</td>
+                    <td>{$val.enddate}</td>
+                    <td>{$val.roomcharge}</td>
+                    <td>{$val.phone}</td>
+                    <td>
+                        <a href="{:U('HotelOrder/index',
+                   'hotel_id='.$val['hotelid'].
+                   '&room_id='.$val['roomid'].
+                   '&order_id='.$val['id'])}">修改</a>
+                    </td>
+                </tr>
+            </volist>
+            </tbody>
+        </table>
+    </div>
+</section>
+<script>
+    $(function(){
+        $(".login_con").hover(
+            function(){
+                $(".menu_con .user .message").css("display", "block");
+                $(".menu_con .login_con s").css("transform", "rotate(180deg)")
+            },
+            function(){
+                $(".menu_con .user .message").css("display", "none");
+                $(".menu_con .login_con s").css("transform", "rotate(0)")
+            }
+        );
+    });
+
+
+</script>
+</body>
+</html>

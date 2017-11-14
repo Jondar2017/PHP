@@ -1,0 +1,237 @@
+<include file="Food/base"/>
+<link rel="stylesheet" href="__PUBLIC__/Css/line/line.css">
+<link rel="stylesheet" href="__PUBLIC__/Css/line/desc.css">
+<link rel="stylesheet" href="__PUBLIC__/Css/date/font-awesome.min.css">
+<link rel="stylesheet" href="__PUBLIC__/Css/date/foundation-datepicker.css">
+<div id="conten">
+    <div class="rht">
+        <div id="main">
+            <foreach name="line" item="v">
+                <div class="top">
+                    <h1>
+                        {$v.recomend_des}
+                        <i class="recommend" title="推荐">
+                            <img src="__PUBLIC__/Images/line/ico_recommend.png" alt="">
+                        </i>
+                    </h1>
+                    <div class="top_lft">
+                        <p class="pic">
+                            <img src="__PUBLIC__/Images/recommend/{$v.image_path}" alt="{$v.recomend_des}" style="width: 270px; height: 170px">
+                        </p>
+                        <div class="pic_bottom">
+                            <ul>
+                                <li>
+                                    <i class="i1"></i>
+                                    关注(6320)
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="i3"></i>
+                                        收藏
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="top_rht">
+                        <div class="txt">
+                            <div class="custom_tip">
+                                本线路行程无购物，以您与旅行社签订的系列合同为准
+                            </div>
+                            <div class="xianluMoney">
+                                <dl>
+                                    <dt>门市价：</dt>
+                                    <dd><del id="price_span">{$v.recomend_all}</del>元</dd>
+                                </dl>
+                                <dl>
+                                    <dt>途牛价：</dt>
+                                    <dd class="z_price">
+                                    <span id="price_cncn_span">
+                                        <em>{$v.recomend_price}</em>元起
+                                    </span>
+                                    <span id="price_cncn_child_span" style="padding-left: 10px;">
+                                        儿童价：<em>{$v.recomend_child}</em>元起
+                                    </span>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>出发城市：</dt>
+                                    <dd><a href="">{$v.recomend_city}</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>发团时间：</dt>
+                                    <dd class="fa_riqi">天天发团，请至少提前<b>1</b>天报名</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <form action="{:U('Home/Order/index')}" method="post" name="form_order" id="form_order" target="_self">
+                            <input type="hidden" id="line_id" name="id" value="{$v.recomend_id}">
+                            <input type="hidden" name="uid" value>
+                            <input type="hidden" id="adult_price" name="adult_price" value="{$v.recomend_price}">
+                            <input type="hidden" id="child_price" name="child_price" value="{$v.recomend_child}">
+                            <input type="hidden" id="discount" name="discount" value="{$v.recomend_discount}">
+                            <input type="hidden" id="type_id" name="type_id" value="跟团游">
+                            <input type="hidden" id="price_type_arrs" name="price_type_arrs" value="{$v.recomend_city}">
+                            <input type="hidden" id="name_mobile" name="name_mobile">
+                            <div class="key" id="key_css">
+                                <p class="tb-note-title">请选择您的出游信息 <b class="J_PanelCloser">关闭</b></p>
+                                <dl>
+                                    <dt>预定类型：</dt>
+                                    <dd class="order_type">
+                                        <ul>
+                                            <li class="selected" id="li_date_type3719455">
+                                                <a href="">跟团游</a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>出发日期：</dt>
+                                    <dd>
+                                        <input type="text" id="start_time" name="start_time" class="text text110 riqi" placeholder="请选择出发日期" value=""  title="点击选择出发日期">
+                                    </dd>
+                                </dl>
+                                <dl class="table_date">
+                                    <div class=""></div>
+                                </dl>
+                                <dl>
+                                    <dt>预定人数：</dt>
+                                    <dd>
+                                        <input type="text" name="adult_num" class="text text30" value="1" onkeyup="CheckInputInt(this);" maxlength="2">
+                                        <span>成人</span>
+                                        <span id="child_num_span">
+                                            <input type="text"  name="child_num" class="text text30" value="0" onkeyup="CheckInputInt2(this); check_child_price();" maxlength="2">
+                                            <span>儿童</span>
+                                        </span>
+                                        <span class="child_message" id="child_message"></span>
+                                    </dd>
+                                </dl>
+                                <div class="button">
+                                    <input type="button" id="submit_button" class="submit1" onclick="check_order(this);">
+                                    <p>在线预订可以享受途牛优惠价，预定后客服会主动联系您确认！</p>
+                                </div>
+                            </div>
+
+                            <script src="__PUBLIC__/Js/date/jquery-1.11.3.min.js"></script>
+                            <script src="__PUBLIC__/Js/date/foundation-datepicker.js"></script>
+                            <script src="__PUBLIC__/Js/date/locales/foundation-datepicker.zh-CN.js"></script>
+                            <script>
+
+                                var nowTemp = new Date();
+                                var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate()+1, 0, 0, 0, 0);
+                                var checkin = $('#start_time').fdatepicker({
+                                    format: 'yyyy-mm-dd',
+                                    onRender: function (date) {
+                                        return date.valueOf() <= now.valueOf() ? 'disabled' : '';
+                                    }
+                                }).on('changeDate', function (ev) {
+                                    checkin.hide();
+                                }).data('datepicker');
+                            </script>
+                            <script>
+                                //判断form表单中的数据是否全部都不为空
+                                $(function(){
+                                    $("#submit_button").click(function(){
+                                        $("input:text").each(function() {
+                                            if($.trim($(this).val()) == "")
+                                            {
+                                                $("#key_css").addClass("key2");
+                                                $(".top_rht .key .tb-note-title").css("display", "block");
+                                                return false;
+                                            } else {
+                                                $("#form_order").submit();
+                                            }
+                                        });
+                                    });
+                                   $(".J_PanelCloser").click(function(){
+                                       $("#key_css").removeClass("key2");
+                                       $(".top_rht .key .tb-note-title").css("display", "none");
+                                   });
+
+                                });
+                                //判断输入的成人票数是否是int类型
+                                function CheckInputInt(value){
+                                    var v = value;
+                                    var pattern = /^[1-9]\d*|0$/; //匹配非负整数
+                                    v.value = v.value.replace(/[^\d]/g, "");
+                                    if (!pattern.test(v.value)) {
+                                        v.value = "";
+                                        return false;
+                                    }
+                                }
+                                function CheckInputInt2(value){
+                                    var v = value;
+                                    var pattern = /^[1-9]\d*|0$/; //匹配非负整数
+                                    v.value = v.value.replace(/[^\d]/g, "");
+                                    if (!pattern.test(v.value)) {
+                                        v.value = "";
+                                        return false;
+                                    }
+                                }
+                            </script>
+                        </form>
+                    </div>
+                </div>
+            </foreach>
+
+        </div>
+        <div class="box" id="tab_fxd">
+            <div class="tit">
+                <ul>
+                    <li class="on">
+                        <span>线路特色</span>
+                    </li>
+                    <li >
+                        <span>参考行程</span>
+                    </li>
+                    <li>
+                        <span>费用说明</span>
+                    </li>
+                    <li>
+                        <span>预定指南</span>
+                    </li>
+                    <li>
+                        <span>游客点评</span>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                $(function(){
+                    $(".box .tit li").click(function(){
+                        $(this).addClass("on").siblings().removeClass("on");
+                        $index = $(this).index();
+                        switch ($index) {
+                            case 1:
+                                $(".sectionBox .txt1").css("display", "none");
+                                $(".sectionBox #scheduling_main2").css("display", "block");
+
+                        }
+                    });
+                });
+            </script>
+        </div>
+        <div class="sectionBox">
+            <div id="scheduling" class="box section">
+                <div class="txt1" id="scheduling_main1">
+                    <foreach name="feature" item="v">
+                        {$v.feature_des}
+                    </foreach>
+                </div>
+                <div class="txt1" id="scheduling_main2">
+                    <foreach name="feature" item="v">
+                        {$v.feature_des}1111
+                    </foreach>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fn_clear"></div>
+<script>
+    $(function () {
+        $(".city_top .city_menu ul li:nth-child(3)").addClass("on");
+    });
+
+</script>
+</body>
+</html>

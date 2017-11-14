@@ -1,0 +1,153 @@
+[ 2017-06-25T00:56:29+08:00 ] ::1 /travel/index.php/Admin/Manage/manageFood.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001421s ]
+
+[ 2017-06-25T12:01:00+08:00 ] ::1 /travel/index.php/Admin/Public/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T12:16:19+08:00 ] ::1 /travel/index.php/Admin/Manager/index.html
+ERR: 无法加载控制器:Manager
+
+[ 2017-06-25T12:16:32+08:00 ] ::1 /travel/index.php/Admin/Manager/index.html
+ERR: 无法加载控制器:Manager
+
+[ 2017-06-25T12:16:36+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T12:16:36+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/layui.js
+ERR: 非法操作:plugins
+
+[ 2017-06-25T12:16:36+08:00 ] ::1 /travel/index.php/Admin/Manage/main.html
+ERR: 非法操作:main
+
+[ 2017-06-25T12:16:36+08:00 ] ::1 /travel/index.php/Admin/Manage/datas/nav.js
+ERR: 非法操作:datas
+
+[ 2017-06-25T12:16:36+08:00 ] ::1 /travel/index.php/Admin/Manage/js/index.js
+ERR: 非法操作:js
+
+[ 2017-06-25T12:16:36+08:00 ] ::1 /travel/index.php/Admin/Manage/css/global.css
+ERR: 非法操作:css
+
+[ 2017-06-25T12:18:11+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/layui.js
+ERR: 非法操作:plugins
+
+[ 2017-06-25T12:18:11+08:00 ] ::1 /travel/index.php/Admin/Manage/main.html
+ERR: 非法操作:main
+
+[ 2017-06-25T12:18:11+08:00 ] ::1 /travel/index.php/Admin/Manage/js/index.js
+ERR: 非法操作:js
+
+[ 2017-06-25T12:18:11+08:00 ] ::1 /travel/index.php/Admin/Manage/datas/nav.js
+ERR: 非法操作:datas
+
+[ 2017-06-25T12:18:11+08:00 ] ::1 /travel/index.php/Admin/Manage/js/index.js
+ERR: 非法操作:js
+
+[ 2017-06-25T12:21:16+08:00 ] ::1 /travel/index.php/Admin/Manage/main.html
+ERR: 非法操作:main
+
+[ 2017-06-25T12:26:06+08:00 ] ::1 /travel/index.php/Admin/Manage/main.html
+ERR: 非法操作:main
+
+[ 2017-06-25T12:28:39+08:00 ] ::1 /travel/index.php/Admin/Manage/css/main.css
+ERR: 非法操作:css
+
+[ 2017-06-25T12:28:39+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T12:33:00+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T12:33:00+08:00 ] ::1 /travel/index.php/Admin/Manage/css/main.css
+ERR: 非法操作:css
+
+[ 2017-06-25T12:33:07+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T12:33:07+08:00 ] ::1 /travel/index.php/Admin/Manage/css/main.css
+ERR: 非法操作:css
+
+[ 2017-06-25T12:33:13+08:00 ] ::1 /travel/index.php/Admin/Manage/css/main.css
+ERR: 非法操作:css
+
+[ 2017-06-25T12:33:13+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T15:24:52+08:00 ] ::1 /travel/index.php/Admin/Manage/css/main.css
+ERR: 非法操作:css
+
+[ 2017-06-25T15:24:52+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T15:34:47+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T15:34:47+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/layui.js
+ERR: 非法操作:plugins
+
+[ 2017-06-25T15:34:47+08:00 ] ::1 /travel/index.php/Admin/Manage/js/index.js
+ERR: 非法操作:js
+
+[ 2017-06-25T15:34:47+08:00 ] ::1 /travel/index.php/Admin/Manage/datas/nav.js
+ERR: 非法操作:datas
+
+[ 2017-06-25T15:34:47+08:00 ] ::1 /travel/index.php/Admin/Manage/css/global.css
+ERR: 非法操作:css
+
+[ 2017-06-25T15:34:47+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T15:34:47+08:00 ] ::1 /travel/index.php/Admin/Manage/css/main.css
+ERR: 非法操作:css
+
+[ 2017-06-25T15:34:47+08:00 ] ::1 /travel/index.php/Admin/Manage/js/index.js
+ERR: 非法操作:js
+
+[ 2017-06-25T15:41:07+08:00 ] ::1 /travel/index.php/Admin/Manage/plugins/layui/css/layui.css
+ERR: 非法操作:plugins
+
+[ 2017-06-25T15:41:07+08:00 ] ::1 /travel/index.php/Admin/Manage/css/main.css
+ERR: 非法操作:css
+
+[ 2017-06-25T17:29:21+08:00 ] ::1 /travel/index.php/Admin/Manage/login.html
+ERR: 非法操作:login
+
+[ 2017-06-25T17:29:48+08:00 ] ::1 /travel/index.php/Admin/Manage/login.html
+ERR: 非法操作:login
+
+[ 2017-06-25T18:08:17+08:00 ] ::1 /travel/index.php/Admin/Manage/product_detail.html
+ERR: 非法操作:product_detail
+
+[ 2017-06-25T18:25:21+08:00 ] ::1 /travel/index.php/Admin/Manage/recycle_bin.html
+ERR: 非法操作:recycle_bin
+
+[ 2017-06-25T20:06:18+08:00 ] ::1 /travel/index.php/Admin/Manage/shop.html
+ERR: 1146:Table 'db_travel.travel_shop' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `travel_shop`
+
+[ 2017-06-25T20:07:13+08:00 ] ::1 /travel/index.php/Admin/Manage/shop.html
+ERR: Think\Model:handleData方法不存在！
+
+[ 2017-06-25T20:08:33+08:00 ] ::1 /travel/index.php/Admin/Manage/shop.html
+ERR: Think\Model:handleData方法不存在！
+
+[ 2017-06-25T20:59:13+08:00 ] ::1 /travel/index.php/Admin/Manage/recycle_bin.html
+ERR: 非法操作:recycle_bin
+
+[ 2017-06-25T22:19:00+08:00 ] ::1 /travel/index.php/Admin/Manage/recycle_bin.html
+ERR: 非法操作:recycle_bin
+
+[ 2017-06-25T22:34:06+08:00 ] ::1 /travel/index.php/Admin/Manage/hotel.html%20class=
+ERR: 非法操作:hotel.html class=
+
+[ 2017-06-25T22:34:48+08:00 ] ::1 /travel/index.php/Admin/Manage/hotel.html%20class=
+ERR: 非法操作:hotel.html class=
+
+[ 2017-06-25T22:34:51+08:00 ] ::1 /travel/index.php/Admin/Manage/hotel.html%20class=
+ERR: 非法操作:hotel.html class=
+
+[ 2017-06-25T22:35:25+08:00 ] ::1 /travel/index.php/Admin/Manage/hotel.html%20class=
+ERR: 非法操作:hotel.html class=
+

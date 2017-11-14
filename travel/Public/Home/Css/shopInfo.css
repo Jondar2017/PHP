@@ -1,0 +1,42 @@
+.produce_info dd .title .star {
+    margin-left: 10px;
+    color: #f91;
+}
+.produce_info dd .title .star i s {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 88px;
+    height: 14px;
+    background: url(../Images/fire.png) no-repeat 0 0;
+}
+.produce_con {
+    padding: 19px;
+    border: 1px solid #dcdcdc;
+    background: #fff;
+    overflow: hidden;
+}
+.produce_con dd {
+    display: block;
+    margin-left: 80px;
+}
+.produce_info dd .title .star b {
+    font-size: 16px;
+    font-weight: normal;
+}
+.produce_con dd span.c_f00 {
+    color: #f00;
+}
+.produce_con dl {
+    font-size: 14px;
+    line-height: 30px;
+    color: #666;
+}
+.produce_con dd span.c_008fe9 {
+    color: #008fe9;
+}
+.produce_con dt {
+    float: left;
+    font-weight: bold;
+}

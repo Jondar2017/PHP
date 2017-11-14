@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/index.css">
+    <script src="__PUBLIC__/Js/jquery.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__/Css/foodDetail.css">
+    <link rel="stylesheet" href="__PUBLIC__/Css/shopInfo.css">
+</head>
+<body>
+<include file="Food/base"/>
+<div class="content mt20">
+    <div class="side_main">
+        <div class="produce_info">
+            <dl>
+                <dt>
+                    <a>
+                        <img src="__PUBLIC__/Images/shop/{$data.shop_image}"
+                             alt="粤式早茶" border="0" width="210" height="140">
+                    </a>
+                </dt>
+                <dd>
+                    <div class="title">
+                        <h1>{$data.shop_name}</h1>
+                        <span class="star"><i><s style="width:82%;"></s></i><b>{$data.shop_score}</b>分</span>
+                    </div>{$data.shop_decs}
+                </dd>
+            </dl>
+        </div>
+        <div class="box_con mt20">
+            <div class="tit">
+                <strong>餐厅简介</strong>
+            </div>
+            <div class="produce_con">
+                <dl>
+                    <dt>人  均：</dt>
+                    <dd>
+                        <span class="c_f00">￥{$data.shop_price}</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>电  话：</dt>
+                    <dd>
+                        <span class="c_008fe9">{$data.shop_tel}</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>营业时间：</dt>
+                    <dd>{$data.shop_open}</dd>
+                </dl>
+                <dl>
+                    <dt>推 荐 菜：</dt>
+                    <dd>{$data.shop_menu}</dd>
+                </dl>
+                <if condition="$data.shop_service != null">
+                    <dl>
+                        <dt>设施服务：</dt>
+                        <dd>免费wifi，露天座位，有无烟区，有停车位</dd>
+                    </dl>
+                </if>
+                <dl>
+                    <dt>地  址：</dt>
+                    <dd>{$data.shop_addr}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="clear: both"></div>
+</body>
+<script>
+    $(function () {
+        $(".city_top .city_menu ul li:nth-child(4)").addClass("on");
+    });
+
+</script>
+</html>

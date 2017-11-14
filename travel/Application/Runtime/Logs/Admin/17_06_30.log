@@ -1,0 +1,13 @@
+[ 2017-06-30T21:29:49+08:00 ] ::1 /travel/index.php/Admin/Manage/recommend.html
+ERR: Think\Model:handleData方法不存在！
+
+[ 2017-06-30T21:30:41+08:00 ] ::1 /travel/index.php/Admin/Manage/recommend.html
+ERR: Think\Model:handleData方法不存在！
+
+[ 2017-06-30T21:34:27+08:00 ] ::1 /travel/index.php/Admin/Manage/recommend.html
+ERR: Think\Model:handleData方法不存在！
+
+[ 2017-06-30T21:38:55+08:00 ] ::1 /travel/index.php/Admin/Manage/recommend.html
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`db_travel`.`travel_index_recomend`, CONSTRAINT `FK_LINE_DAYS` FOREIGN KEY (`days_id`) REFERENCES `travel_index_days` (`days_id`))
+ [ SQL语句 ] : INSERT INTO `travel_index_recomend` (`recomend_des`,`recomend_city`,`recomend_all`,`recomend_price`,`recomend_child`,`recomend_type`,`recomend_discount`,`image_path`) VALUES ('去惠州大亚湾旅游','惠州','218','198','99','独立出行','20','2017-06-30/5956546fd85da.jpg')
+

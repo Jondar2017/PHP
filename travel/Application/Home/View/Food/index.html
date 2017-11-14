@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游主页显示</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/index.css">
+    <link rel="stylesheet" href="__PUBLIC__/Css/food.css">
+
+    <link rel="stylesheet" href="__PUBLIC__/Css/autocomplete.css">
+    <link rel="stylesheet" href="__PUBLIC__/Css/style.css">
+
+    <script type="text/javascript" src="__PUBLIC__/Js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/autocomplete.js"></script>
+
+</head>
+<body>
+<include file="Food/base"/>
+<div class="content mt20">
+    <div>
+        <!--<h3>试试输入"百度"</h3>-->
+        <div id="search-form">
+            <div class="autocomplete-container" style="height: 60px; width: 408px;">
+                <form method="post" action="{:U('search')}">
+                    <input autocomplete="off" name="search" placeholder="搜索..."
+                           class="autocomplete-input" style="width: 300px; height: 30px;
+                       border-radius: 3px 0px 0px 3px;"
+                           type="text">
+                    <div class="proposal-box" style="width: 318px; top: 50px;">
+                        <ul class="proposal-list"></ul>
+                    </div>
+                    <input class="autocomplete-button" type="submit"
+                         style="height: 48px; line-height: 32px;" onclick="search()"
+                           value="搜索"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="con_left">
+        <div class="food_li">
+            <div class="t">广东美食</div>
+            <div class="a">
+                <volist name="data" id="food">
+                    <a id="my_a" href="{:U('showFoodDetail?food_id='.$food['food_id'])}">
+                        <if condition='$food.image_path == null'>
+                            <img src="__PUBLIC__/Images/food/nopic.gif"/>
+                            <else/>
+                            <img src="__PUBLIC__/Images/food/{$food.image_path}"/>
+                        </if>
+                        <div>
+                            <span>{$food.food_name}</span>
+                            <font>
+                                热度 {$food.food_taste}
+                            </font>
+                            <p>{$food.food_decs|msubstr=0, 43}</p>
+                        </div>
+                    </a>
+                </volist>
+            </div>
+            <div class="page">
+                <div class="page_con">
+                    {$show}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="clear: both;"></div>
+</body>
+<script>
+    $(function () {
+        $(".city_top .city_menu ul li:nth-child(4)").addClass("on");
+    });
+
+</script>
+</html>

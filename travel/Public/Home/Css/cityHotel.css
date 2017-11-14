@@ -1,0 +1,226 @@
+.tit1, .ls_detail .tit1, .city_channel .brand_title, .ls_detail .brand_title {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dddddd;
+}
+.tit1, .sideR .txt {
+    overflow: hidden;
+}
+.city_channel .title {
+    float: left;
+    width: 200px;
+    color: #666666;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 24px;
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.city_channel .title em, .ls_detail .title em {
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    margin: 2px 10px 0 0;
+    background: #00bf4b;
+    vertical-align: top;
+}
+a {
+    color: #555;
+    cursor: pointer;
+    text-decoration: none;
+}
+.warp1000 .city_channel .cityHotel_tag, .warp1000 .city_channel .hotel_info {
+    width: 400px;
+}
+.city_channel .cityHotel_tag {
+    display: block;
+    height: 25px;
+    overflow: hidden;
+}
+.warp1000 .city_channel .cityHotel_tag .chose_type_btn {
+    margin-right: 0;
+}
+.city_channel .cityHotel_tag .on {
+    background: #00bf4b;
+    color: #fff;
+    border-radius: 2px;
+}
+.city_channel .cityHotel_tag .chose_type_btn {
+     float: left;
+     padding: 0 10px;
+     margin-right: 8px;
+     color: black;
+     font-size: 14px;
+     line-height: 24px;
+ }
+a {
+    color: #555;
+    cursor: pointer;
+    text-decoration: none;
+}
+.sideR .tit1, .sideR .txt {
+    overflow: hidden;
+}
+.city_channel .hotel_hot {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.clearfix {
+    zoom: 1;
+}
+.city_channel .hotel_hot li {
+    border-bottom: 1px dashed #ddd;
+    padding: 17px 0 25px;
+    height: 128px;
+    margin-bottom: -1px;
+}
+.city_channel .hotel_pic {
+    float: left;
+    width: 180px;
+    padding-top: 8px;
+}
+.cityHotel_tag, .warp1000 .city_channel .hotel_info {
+    width: 500px;
+}
+.city_channel .hotel_info {
+    float: left;
+    margin-left: 30px;
+    width: 600px;
+    position: relative;
+}
+.city_channel .hotel_info p.title {
+    width: 490px;
+    line-height: 31px;
+}
+.city_channel .hotel_info p {
+    clear: both;
+    color: #666;
+    line-height: 27px;
+    overflow: hidden;
+}
+.warp1000 .city_channel p.title a {
+    max-width: 240px;
+}
+.city_channel .hotel_info .title a {
+    float: left;
+    max-width: 400px;
+    font-size: 16px;
+    margin-right: 10px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.city_channel .hotel_info .title .ico_star {
+    height: 11px;
+    width: 55px;
+    background-position: 0 -357px;
+}
+.icon {
+    background: url(../imgs/icon_index.png) no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+.city_channel .hotel_info .title .ico_star .star_3 {
+    width: 60%;
+}
+.city_channel .hotel_info .title .ico_star i {
+    background-position: 0 -368px;
+    float: left;
+    height: 11px;
+}
+.city_channel .hotel_info .address {
+    margin-bottom: 9px;
+}
+.city_channel .hotel_info p {
+    clear: both;
+    color: #666;
+    line-height: 27px;
+    overflow: hidden;
+}
+.warp1000 .city_channel p.address span {
+    max-height: 230px;
+}
+.warp1000 .hotel_info .address span {
+    max-width: 210px;
+}
+.city_channel .hotel_info .address span {
+    float: left;
+    height: 27px;
+    max-width: 380px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.city_channel .hotel_info .price {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #f30;
+    font-size: 14px;
+}
+.city_channel .hotel_info .price i {
+    vertical-align: super;
+}
+em, i {
+    font-style: normal;
+}
+.city_channel .hotel_info .price .num {
+    font-size: 24px;
+    margin-right: 3px;
+    vertical-align: super;
+}
+.city_channel .hotel_info .price .text {
+    color: #999;
+    vertical-align: super;
+}
+.warp1000 .city_channel .sideR, .warp1000 .city_channel .dibiao {
+    width: 600px;
+}
+
+.city_channel .sideR {
+    /*float: right;*/
+    width: 1000px;
+    margin: 30px auto;
+}
+.city_channel .hotel_info .price .num {
+    font-size: 24px;
+    margin-right: 3px;
+    vertical-align: super;
+}
+.warp1000 .city_channel {
+    width: 1000px;
+}
+.city_channel, .ls_detail {
+}
+.new_main {
+    width: 1200px;
+    margin: 0 auto;
+}
+.warp1000 .city_channel .cityHotel_tag .chose_type_btn {
+    margin-right: 0;
+}
+.city_channel .cityHotel_tag .chose_type_btn a:hover {
+    background: #00bf4b;
+    color: #fff;
+    border-radius: 2px;
+}
+
+select {
+
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+input[type="submit"] {
+
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    background-color: #00bf4a;
+    border: none;
+    color: white;
+}

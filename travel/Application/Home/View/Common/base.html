@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/index.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/s.css" />
+    <script src="__PUBLIC__/Js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="__PUBLIC__/Js/jquery.js"></script>
+    <script src="__PUBLIC__/plugin/layer/layer.js"></script>
+    <link rel="stylesheet" type="text/css"
+          media="screen" href="__PUBLIC__/Css/css-table.css" />
+    <script type="text/javascript" src="__PUBLIC__/Js/style-table.js"></script>
+</head>
+<body>
+<header>
+    <div class="head">
+        <div class="head_con">
+            <div class="logo">
+                <a href="#">
+                    <img src="__PUBLIC__/Images/tuniu.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu_con">
+            <div class="login_content">
+                <span class="welcome">
+                    欢迎登录途牛旅游网
+                </span>
+            </div>
+        </div>
+    </div>
+</header>
+<aside class="lt_aside_nav content mCustomScrollbar">
+    <ul style="color: white">
+        <li>
+            <dl>
+                <dt>查看订单</dt>
+                <dd><a href="{:U('OrderInfo/ticket')}">门票订单</a></dd>
+                <dd><a href="{:U('OrderInfo/query')}">酒店订单</a></dd>
+                <dd><a href="{:U('OrderInfo/sign')}">景点订单</a></dd>
+            </dl>
+        </li>
+    </ul>
+</aside>

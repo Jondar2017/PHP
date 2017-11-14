@@ -1,0 +1,386 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单显示</title>
+    <link rel="stylesheet" href="/travel/Public/Home/Css/order/order.css">
+    <script src="/travel/Public/Home/Js/jquery.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="" title="美好旅程，从途牛旅游开始"></a>
+        </div>
+        <span class="saying">美好旅程，从途牛开始</span>
+        <div class="quick_menu">
+            <ul>
+                <li>
+                        <span id="top_user">
+                            您好，&nbsp;&nbsp;<a href="" class="oldUserLogin" style="cursor:pointer;">请登录</a>&nbsp;&nbsp;<a href="" target="_blank">免费注册</a>
+                        </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="couponPopu" id="couponPopu" style="display: none;">
+        <span class="loginTips" style="display: none;">用户名或密码不能为空</span>
+        <p>
+            <input type="text" name="username" value="请输入用户名" class="inputText">
+        </p>
+        <p>
+            <input type="text" value="请输入密码" class="inputPwd noPwd" style="display: block">
+            <input type="password" value name="password" class="inputPwd relPwd" style="display: none;">
+        </p>
+        <div class="forward">
+            <a href="" target="_blank">忘记密码？</a>
+        </div>
+        <div class="counponSubmit">
+            <a href="" id="user_login">登录</a>
+        </div>
+        <div class="forward">
+            您还不是途牛会员？<a href="" target="_blank">免费注册</a>
+        </div>
+        <i class="couponPopuClose"></i>
+
+    </div>
+    <div class="popuBlack" id="popuBlack" style="display: none;"></div>
+    <script>
+        $(function(){
+            $(".oldUserLogin").click(function(){
+                $("#couponPopu").css("display", "block");
+                $(".popuBlack").css("display", "block");
+                return false;
+            });
+            $(".couponPopuClose").click(function(){
+                $("#couponPopu").css("display", "none");
+                $(".popuBlack").css("display", "none");
+            });
+            $(".noPwd").focus(function(){
+                $(this).css("display", "none");
+                $(".relPwd").css("display", "block");
+            });
+        });
+    </script>
+    <div class="conten">
+        <div id="step" class="step"></div>
+        <div class="content">
+            <?php if(is_array($all)): foreach($all as $k=>$v): ?><div class="xuanluPrice_sum">
+                    <div class="priceTitle">订单信息</div>
+                    <strong class="priceType">出游团费</strong>
+                    <p class="priceType">
+                        <span class="pricePerson">成人</span>
+                        <span class="priceSl">
+                        <em id="adult_nums"><?php echo ($v["adult_num"]); ?></em>x
+                        </span>
+                        <span class="preceDj">￥<?php echo ($v["adult_price"]); ?></span>
+                    </p>
+                    <p class="priceType">
+                        <span class="pricePerson">儿童</span>
+                        <span class="priceSl">
+                        <em id="child_nums"><?php echo ($v["child_num"]); ?></em>x
+                        </span>
+                        <span class="preceDj">￥<?php echo ($v["child_price"]); ?></span>
+                    </p>
+                    <div class="priceJs mt10">
+                        <span class="f1">总价</span>
+                        <span class="fr" style="text-align: right;font-size: 14px;">
+                        <strong style="font-size: 28px;color: #ff5400;"><?php echo ($v["total_price"]); ?></strong>元
+                        </span>
+                    </div>
+                    <div class="lxs_web">
+                        本产品由广东省仲恺旅行社提供服务
+                    </div>
+                </div><?php endforeach; endif; ?>
+            <div class="lft">
+                <?php if(is_array($all)): foreach($all as $key=>$v): ?><div class="order">
+                        <form action="<?php echo U('Home/order/order');?>" method="post" name="form1" id="form1">
+                            <input type="hidden" name="action" value="submit">
+                            <input type="hidden" id="line_id" name="id" value="<?php echo ($v["id"]); ?>">
+                            <!--<input type="hidden" name="lxs_id" value="46859">-->
+                            <!--<input type="hidden" name="uid" value="0">-->
+                            <input type="hidden" id="adult_price" name="adult_price" value="<?php echo ($v["adult_price"]); ?>">
+                            <input type="hidden" id="child_price" name="child_price" value="<?php echo ($v["child_price"]); ?>">
+                            <input type="hidden" id="total_price" name="total_price" value="<?php echo ($v["total_price"]); ?>">
+                            <input type="hidden" id="adults" name="adults" value="<?php echo ($v["adult_num"]); ?>">
+                            <input type="hidden" id="children" name="children" value="<?php echo ($v["children_num"]); ?>">
+                            <input type="hidden" id="travel_type" name="travel_type" value="<?php echo ($v["type_id"]); ?>">
+                            <input type="hidden" id="line_name" name="line_name" value="<?php echo ($v["line_name"]); ?>">
+                            <div class="txt">
+                                <h3 class="dingdan mg_t12">
+                                    <s class="xianlu_icon1 titleBg"></s>产品信息
+                                    <a href="<?php echo U('Home/Line/desc', 'id=' . $v['id']);?>">返回修改</a>
+                                </h3>
+                                <div class="xianlu_content">
+                                    <dl>
+                                        <dt>线路名称：<em>&nbsp;</em></dt>
+                                        <dd class="biaoti">
+                                            <a href="" target="_blank"><?php echo ($v["line_name"]); ?></a>[<?php echo ($v["price_type_arrs"]); ?>出发]
+                                        </dd>
+                                    </dl>
+                                    <dl id="plan_price_dl">
+                                        <dt>价格类型：<em>&nbsp;</em></dt>
+                                        <dd>
+                                            <span class="price_type"><?php echo ($v["type_id"]); ?></span>
+                                        </dd>
+                                    </dl>
+                                    <dl id="start_time_dl">
+                                        <dt>出发日期：<em>&nbsp;</em></dt>
+                                        <dd>
+                                            <b><input type="hidden" name="start_time" value="<?php echo ($v["start_time"]); ?>"><?php echo ($v["start_time"]); ?></b>
+                                        </dd>
+                                    </dl>
+                                    <dl id="adult_num_dl">
+                                        <dt id="plan_price1_dl">参团人数：<em>&nbsp;</em></dt>
+                                        <dd>
+                                            <input type="hidden" id="adult_num" name="adult_num" value="1">
+                                            <input type="hidden" id="child_num" name="adult_num" value="0">
+                                            <div class="canjia_sum">
+                                                <p class="fl">成人：</p>
+                                                <div class="p_number">
+                                                    <s style="color: #aaa;" id="first_s">-</s>
+                                                    <em id="menNum"><?php echo ($v["adult_num"]); ?></em>
+                                                    <b>+</b>
+                                                </div>
+                                            </div>
+                                            <div class="canjia_sum">
+                                                <p class="fl">儿童：</p>
+                                                <div class="p_number">
+                                                    <s style="color: #aaa;">-</s>
+                                                    <em id="childNum"><?php echo ($v["child_num"]); ?></em>
+                                                    <b>+</b>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+
+                                    <dl>
+                                        <dt>优惠价：<em>&nbsp;</em></dt>
+                                        <dd>
+                                        <span class="price cncnPrice">
+                                            <em id="price_cncn_price"><?php echo ($v["adult_price"]); ?></em>元/成人
+                                        </span>
+                                        <span class="price cncnPrice">
+                                            <em id="price_cncn_child_price"><?php echo ($v["child_price"]); ?></em>元/儿童
+                                        </span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <h3 class="dingdan mg_t12" style="margin-top: 30px;">
+                                    <s class="xianlu_icon3 titleBg"></s>联系方式
+                                    <em>为及时联系您确认，请填写您的真是信息</em>
+                                </h3>
+                                <div class="xianlu_content">
+                                    <dl id="truename_dl" style="padding-bottom: 12px; height:28px;">
+                                        <dt>
+                                            <em>*</em>
+                                            联系人：
+                                            <em>&nbsp;</em>
+                                        </dt>
+                                        <dd style="position: relative;">
+                                            <input type="text" name="username" id="username" class="text" onblur="check_name(this);" maxlength="20" onfocus="focusIntput(this);" value placeholder="请填写联系人姓名">
+                                            <div class="new_trips" style="display: none;">联系人姓名不能为空</div>
+                                        </dd>
+                                    </dl>
+                                    <dl id="mobiletel_dl" style="padding-bottom: 15px; height: 28px;">
+                                        <dt>
+                                            <em>*</em>
+                                            手机号码：
+                                            <em>&nbsp;</em>
+                                        </dt>
+                                        <dd style="position: relative">
+                                            <input type="text" id="mobiletel" name="phone" placeholder="用于接收确认订单信息" onkeyup="" onblur="check_mobile(this);" onfocus="focusInput1(this);" name="moblietel" class="text" maxlength="11" value rule="^1[3][5][8][0-9]\d{8}$">
+                                            <span id="mobiletel_y" message="请输入正确的手机号码" class="red"></span>
+                                            <div class="new_trips" style="display: none;">请输入正确的手机号码</div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                            预定留言：
+                                            <em>&nbsp;</em>
+                                        </dt>
+                                        <dd>
+                                            <textarea name="intro" class="order_ly" wrap="virtual" onclick="getfocus(this);"></textarea>
+                                        </dd>
+                                    </dl>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="order_next">
+                                <a class="btn" onclick="check_username()">确认提交订单</a>
+                                <span><b>预定提示：</b>提交订单后，旅行社会及时联系您确认；旅游产品价格变化大，确认后请及时付款</span>
+                            </div>
+                        </form>
+
+                    </div><?php endforeach; endif; ?>
+                <script>
+                    $(function(){
+                        var em = $(".p_number em");
+                        var emH = parseInt(em.html());
+                        if (emH >= 1){
+                            em.prev().css("color", "#5abb1f");
+                        }
+                        //当点击-号时
+                        $(".p_number s").click(function(){
+                            var sv = $(this).next().html();
+                            var childV = $("#child_num").html();
+
+                            var intSv = parseInt(sv);
+                            var status = 1;
+                            intSv--;
+                            if (intSv < 1 && status == 1){
+                                $(this).next().html(0);
+                                if (childV != 0){
+                                    $("#menNum").html(1);
+                                }
+                                $(this).css("color", " #aaa");
+                                status = 0;
+                            } else {
+                                $(this).next().html(intSv);
+                                $(this).css("color", "#5abb1f");
+                            }
+                            get_allPrice();
+                        });
+
+                        //当点击成人的"-"号时，判断是否小于1,则
+                        $("#first_s").click(function(){
+                            var emv = $(this).next().html();
+                            if(emv <= 1){
+                                $(this).next().html(1);
+                            }
+                            get_allPrice();
+                        });
+
+                        //当点击+号时
+                        $(".p_number b").click(function(){
+                            var bv = $(this).prev().html();
+                            var intBv = parseInt(bv);
+                            intBv++;
+                            $(this).prev().html(intBv);
+                            $(this).prev().prev().css("color", "#5abb1f");
+                            get_allPrice();
+                        });
+
+                        //获取订单的总价格
+                        function get_allPrice(){
+                            //获取大人和小孩的人数
+                            var menNum = $("#menNum").html();
+                            var childNum = $("#childNum").html();
+
+                            //获取线路的名称
+                            var line_name = $(".biaoti a").html();
+
+                            //获取出游类型
+                            var travel_type = $("#plan_price_dl .price_type").html();
+
+                            //获取大人和小孩的单价
+                            var menPrice = parseInt($("#price_cncn_price").html());
+                            var childPrice = parseInt($("#price_cncn_child_price").html());
+
+                            //总价
+                            var allPrice = menNum * menPrice + childNum * childPrice;
+
+                            //点击-+号改变的值
+                            $("#adult_nums").html(menNum);
+                            $("#child_nums").html(childNum);
+                            $(".priceJs strong").html(allPrice);
+
+                            //给表单改变后的值
+                            $("#adult_price").val(menPrice);
+                            $("#child_price").val(childPrice);
+                            $("#adults").val(menNum);
+                            $("#children").val(childNum);
+                            $("#line_name").val(line_name);
+                            $("#travel_type").val(travel_type);
+                            $("#total_price").val(allPrice);
+                        }
+                    });
+                </script>
+
+                <script>
+                    //检查输入信息是否正确
+                    function check_name(name){
+                        var val = name.value;
+                        var newtrips = document.getElementsByClassName("new_trips")[0];
+                        if (val == ""){
+                            newtrips.style.display = "inline-block";
+                        } else {
+                            newtrips.style.display = "none";
+                        }
+                    }
+                    //检查输入的手机号码是否正确
+                    function check_mobile(mobile){
+                        var mobilev = mobile.value;
+                        var newtrips = document.getElementsByClassName("new_trips")[1];
+                        if (!(/^1[3|4|5|8][0-9]\d{8}$/.test(mobilev))){
+                            newtrips.style.display = "inline-block";
+                        } else {
+                            newtrips.style.display = "none";
+                        }
+                    }
+                    //获得焦点时
+                    function focusIntput(name){
+                        var val = name.value;
+                        if(val != ""){
+                            var newtrips = document.getElementsByClassName("new_trips")[0];
+                            newtrips.style.display = "none";
+                        }
+                    }
+                    //获得焦点时
+                    function focusIntput1(mobile){
+                        var val = mobile.value;
+                        if(/^1[3|4|5|8][0-9]\d{8}$/.test(val)){
+                            var newtrips = document.getElementsByClassName("new_trips")[1];
+                            newtrips.style.display = "none";
+                        }
+                    }
+
+                    //点击确认订单按钮，检测用户名和手机号码是否输入正确
+                    function check_username(){
+                        var username = document.getElementById("username");
+                        var userv = username.value;
+                        var mobiletel = document.getElementById("mobiletel");
+                        var val = mobiletel.value;
+                        var newtrips0 = document.getElementsByClassName("new_trips")[0];
+                        var newtrips1 = document.getElementsByClassName("new_trips")[1];
+                        if (userv == ""){
+                            //自定义错误信息
+                            var oDiv = document.createElement("div");
+                            oDiv.style.marginTop = "-11px";
+                            oDiv.style.marginLeft = "70px";
+                            oDiv.style.left = "50%";
+                            oDiv.innerHTML = "请输入您的姓名！";
+                            oDiv.className = "alert";
+                            document.body.appendChild(oDiv);
+
+                            newtrips0.style.display = "inline-block";
+                            if(!(/^1[3|4|5|8][0-9]\d{8}$/.test(val))){
+                                newtrips1.style.display = "inline-block";
+                            }
+                        } else if(!(/^1[3|4|5|8][0-9]\d{8}$/.test(val))){
+                            var oDiv = document.createElement("div");
+                            oDiv.style.marginTop = "-11px";
+                            oDiv.style.marginLeft = "70px";
+                            oDiv.style.left = "50%";
+                            oDiv.innerHTML = "请输入正确的手机号码！";
+                            oDiv.className = "alert";
+                            document.body.appendChild(oDiv);
+                            newtrips1.style.display = "inline-block";
+                        } else {
+                            $("#form1").submit();
+                        }
+                        setTimeout("codefans()",3000);//2秒，可以改动
+                    }
+
+                    //设置提示的div消失
+                    function codefans(){
+                        var box = document.getElementsByClassName("alert")[0];
+                        document.body.removeChild(box);
+                    }
+
+                </script>
+            </div>
+            <!--<div class="alert" style="margin-top: -11px;margin-left: -70px;left: 50%;">请输入正确的手机号码</div>-->
+        </div>
+    </div>
+</body>
+</html>

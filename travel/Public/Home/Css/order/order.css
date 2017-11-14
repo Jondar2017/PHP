@@ -1,0 +1,520 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+div, th, td{
+    font-size: 12px;
+}
+div{
+    display: block;
+}
+a {
+    color: #555;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover{
+    color: #ff9911;
+}
+strong b{
+    font-weight: bold;
+}
+p{
+    display: block;
+}
+s,del,strike{
+    text-decoration: line-through;
+}
+em, i {
+    font-style: normal;
+}
+li{
+    list-style: none;
+}
+sup {
+    vertical-align: text-top;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+.header {
+    position: relative;
+    width: 1000px;
+    height: 56px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #80c249;
+    z-index: 2;
+}
+.header {
+    border-bottom: none;
+}
+.header .logo {
+    position: relative;
+    bottom: -5px;
+    width: 125px;
+    float: left;
+    height: 75px;
+    background: url(../../Images/tuniu.jpg) no-repeat;
+}
+.header .logo a {
+    display: block;
+    width: 125px;
+    height: 75px;
+}
+.header span.saying {
+    float: left;
+    padding: 38px 0 0 20px;
+    font-size: 14px;
+    color: #090;
+    font-family: "microsoft yahei";
+}
+.header .quick_menu {
+    float: right;
+    padding-top: 24px;
+    margin-right: -3px;
+    text-align: right;
+    color: #777;
+}
+.header .quick_menu li {
+    float: left;
+    padding: 0 3px;
+    line-height: 28px;
+}
+span#top_user {
+    display: inline;
+    float: none;
+    padding: 0;
+    font-size: 12px;
+    font-family: Arial;
+}
+.couponPopu {
+    padding: 28px;
+    background: #fff;
+    height: 260px;
+    width: 222px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -158px;
+    margin-left: -140px;
+    z-index: 100;
+    cursor: default;
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    display: none;
+}
+.loginTips {
+    position: absolute;
+    width: 200px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #f00;
+    top: 10px;
+    left: 30px;
+    padding-left: 20px;
+    text-align: left;
+    background: url(../../Images/order/jf_tips.png) 0 0 no-repeat;
+    display: none;
+}
+.couponPopu p {
+    height: 34px;
+    padding: 5px 0;
+}
+.inputText, .inputPwd {
+    height: 16px;
+    padding: 8px 5px;
+    display: block;
+    border: 1px solid #ccc;
+    width: 210px;
+    background: #fff;
+    outline: none;
+    color: #888;
+}
+.forward {
+    height: 16px;
+    line-height: 16px;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+}
+.forward a {
+    color: #2b8ee2;
+}
+.forward a:hover{
+    text-decoration: underline;
+}
+.counponSubmit a {
+    height: 40px;
+    margin: 20px 0 8px 0;
+    display: block;
+    background: #ff8800;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 2px;
+}
+.counponSubmit a:hover{
+    text-decoration: underline;
+}
+.couponPopu .couponPopuClose {
+    width: 25px;
+    height: 26px;
+    background: url(../../Images/order/closeIcon.png) 0 0 no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    cursor: pointer;
+}
+.couponPopu .couponPopuClose:hover{
+    background: url(../../Images/order/closeIcon1.png) 0 0 no-repeat;
+}
+.popuBlack {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 99;
+    display: none;
+}
+#conten {
+    position: relative;
+    width: 1000px;
+    margin: 20px auto 0 auto;
+    z-index: 1;
+}
+#conten:after, .clearfix:after {
+    content: "";
+    clear: both;
+    height: 0;
+    display: block;
+    overflow: hidden;
+}
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.content:after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.xuanluPrice_sum {
+    width: 198px;
+    border: 1px solid #ffc8a3;
+    background: #fff4d9;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    font-family: "microsoft yahei";
+}
+.priceTitle {
+    height: 30px;
+    margin: 15px 15px 5px 15px;
+    line-height: 30px;
+    background: url(../../Images/order/shop_icon.png) 0 center no-repeat;
+    color: #ff5400;
+    font-size: 14px;
+    text-indent: 25px;
+}
+.priceType {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 15px;
+    color: #666;
+    display: block;
+}
+.pricePerson {
+    width: 70px;
+    float: left;
+}
+.priceSl {
+    width: 20px;
+    float: left;
+    text-align: right;
+}
+.priceSl em {
+    padding-right: 3px;
+}
+.preceDj {
+    width: 73px;
+    float: left;
+    text-align: right;
+    color: #333;
+}
+.priceJs {
+    height: 50px;
+    padding: 0 15px;
+    background: #ffe4c3;
+    line-height: 50px;
+    overflow: hidden;
+}
+.mt10 {
+    margin-top: 10px!important;
+}
+.fl {
+    float: left;
+}
+.fl {
+    float: left!important;
+}
+.fr {
+    float: right;
+}
+.fr {
+    float: right!important;
+}
+.lxs_web {
+    position: absolute;
+    bottom: -110px;
+    left: 10px;
+    height: 100px;
+}
+#step {
+    width: 1000px;
+    height: 30px;
+    color: #fff;
+    overflow: hidden;
+}
+.lft {
+    width: 740px;
+    float: left;
+}
+.order {
+    width: 780px;
+    float: left;
+    margin-top: 35px;
+    font-family: "microsoft yahei";
+}
+.order .txt {
+    padding: 20px;
+    border: 1px solid #e6e6e6;
+}
+.order .txt h3 {
+    font-size: 18px;
+    color: #666666;
+    height: 44px;
+    line-height: 44px;
+    font-weight: normal;
+}
+.order .txt h3 s {
+    height: 44px;
+    width: 44px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.order .txt h3 s.xianlu_icon1 {
+    background: #b5b5b5 url(../../Images/order/xianlu_icon1.png) center no-repeat;
+}
+.order .txt h3 s.titleBg {
+    background-color: #5abb1f;
+}
+.order .txt h3 a {
+    font-size: 12px;
+    font-weight: normal;
+    color: #5abb1f;
+    float: right;
+    width: 70px;
+    background: url(../../Images/order/xianlu_goback.png) 0 center no-repeat;
+    text-align: right;
+}
+.xianlu_content {
+    background: #f5f5f5;
+    padding: 15px 20px;
+    margin-top: 10px;
+    position: relative;
+}
+.order .txt dl {
+    width: 654px;
+    font-size: 14px;
+    padding: 4px 0;
+    line-height: 28px;
+}
+.order .txt dl:after {
+    content: "";
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display: block;
+}
+.order .txt dt {
+    width: 110px;
+    float: left;
+    text-align: right;
+    font-size: 14px;
+    line-height: 30px;
+    color: #666;
+}
+.order .txt dd {
+    font-size: 14px;
+    vertical-align: middle;
+    width: 536px;
+    float: left;
+}
+.order .txt dd.biaoti {
+    font-size: 14px;
+}
+.order .txt dd.biaoti a {
+    color: #333;
+}
+.order .txt dt em {
+    width: 10px;
+    font-size: 12px;
+    color: #ff7d7d;
+    padding: 0 3px;
+}
+.order .txt dd span.price_type {
+    display: inline-block;
+    padding: 0 5px;
+    line-height: 24px;
+    background: url(../../Images/line/ico_show.png) #fff no-repeat right bottom;
+    border: 1px solid #f73;
+}
+.canjia_sum, .select_jf {
+    height: 26px;
+    line-height: 26px;
+    width: 160px;
+    float: left;
+    padding: 1px 0;
+    font-size: 14px;
+}
+.p_number, .jf_number {
+    border: 1px solid #ccc;
+    height: 24px;
+    line-height: 24px;
+    width: 82px;
+    float: left;
+    text-align: center;
+    background: #fff;
+}
+.p_number s, .p_number b, .jf_number s, .jf_number b {
+    width: 24px;
+    height: 24px;
+    float: left;
+    border-right: 1px solid #ccc;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5abb1f;
+    cursor: pointer;
+    text-decoration: none;
+}
+.p_number s:hover, .p_number b:hover, .jf_number s:hover, .jf_number b:hover {
+    background: #e7ffd7;
+}
+.p_number s, .jf_number s {
+    font-size: 28px;
+    font-weight: normal;
+}
+.p_number em, .jf_number em {
+    float: left;
+    width: 32px;
+}
+.order .txt h3 em {
+    color: #999;
+    padding-left: 10px;
+    font-size: 12px;
+}
+.p_number b, .jf_number b {
+    border: none;
+    border-left: 1px solid #ccc;
+}
+.xianlu_content .price {
+    color: #f60;
+    padding-right: 20px;
+}
+.order .txt h3 s.xianlu_icon3 {
+    background: #b5b5b5 url(../../Images/order/xianlu_icon3.png) center no-repeat;
+}
+.order .txt input {
+    padding-left: 3px;
+}
+.order .txt input.text {
+    width: 200px;
+    height: 28px;
+    padding-left: 7px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+.new_trips {
+    height: 13px;
+    background: url(../../Images/order/jf_tips.png) 0 0 no-repeat;
+    font-size: 12px;
+    color: #f00;
+    line-height: 13px;
+    text-indent: 18px;
+    display: none;
+    margin-left: 10px;
+}
+.order .txt textarea.order_ly {
+    width: 450px;
+    height: 60px;
+    font-size: 13px;
+    color: #999;
+    border: 1px solid #ccc;
+}
+.order .order_next .btn {
+    display: block;
+    width: 148px;
+    height: 38px;
+    background: #ff9419;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 20px 0 0 20px;
+}
+.order .order_next .btn:hover {
+    background: #fb8600;
+    text-decoration: none;
+}
+.order .order_next span {
+    background: url(../../Images/order/yug_tips.png) 0 center no-repeat;
+    margin-left: 20px;
+    line-height: 40px;
+    height: 40px;
+    color: #999;
+    display: block;
+    text-indent: 20px;
+}
+
+.alert{
+    position:fixed;
+    background:#000;
+    background: rgba(0,0,0,0.7);
+    color:#fff;
+    box-shadow:0 0 5px rgba(0,0,0,0.5);
+    border-radius:3px;
+    padding:5px 15px;
+    left:0;top:50%;
+    max-width:300px;
+    box-sizing:border-box;
+    line-height:22px;
+    font-size:14px;
+    animation:alert 3s;
+    opacity:1;
+    z-index:99999;
+}
+@keyframes alert{
+    0%{transform:translateY(-50px);opacity:0;}
+    10%{transform:translateY(0);opacity:1}
+    90%{transform:translateY(0);opacity:1;}
+    100%{transform:translateY(-50px);opacity:0;}
+}
+
+
+

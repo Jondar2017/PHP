@@ -1,0 +1,15 @@
+[ 2017-06-29T00:49:37+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_4/hotel_type/%E5%9B%9B%E6%98%9F%E7%BA%A7.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '四星级' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+
+[ 2017-06-29T00:51:08+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_4/hotel_type/%E5%9B%9B%E6%98%9F%E7%BA%A7.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '四星级' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+
+[ 2017-06-29T00:55:31+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel_4/hotel_type/%E5%9B%9B%E6%98%9F%E7%BA%A7.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and hotel.hotel_id = intro.hotel_id ) LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name,intro.hotel_image FROM `travel_hotel` `hotel`,`travel_city` `city`,`travel_hotel_intro` `intro` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '四星级' 
+            and hotel.hotel_city_id =  and hotel.hotel_id = intro.hotel_id ) LIMIT 10  
+

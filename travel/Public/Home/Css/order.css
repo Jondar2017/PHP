@@ -1,0 +1,189 @@
+ .book_order {
+    width: 90%;
+    margin: 30px auto;
+    /*margin-left: 40px;*/
+    /*margin-top: 20px;*/
+}
+.book_order .sideBar {
+    float: left;
+    width: 300px;
+    font-size: 12px;
+}
+.book_order .hotel_info {
+    border: 1px solid #dddddd;
+    border-top: none;
+    background: #fff;
+}
+.book_order .hotel_info dt img {
+    display: block;
+    width: 100%!important;
+    height: auto!important;
+}
+.lazy {
+    background: #fff url(img_v7/lazy_loading.gif) no-repeat center center;
+}
+.book_order .hotel_info .adress {
+    padding: 20px 0 11px;
+}
+.book_order .hotel_info dd {
+    padding: 15px 0 8px;
+    margin: 0 10px;
+    border-bottom: 1px dashed #dddddd;
+}
+.book_order .hotel_info .adress h3 {
+    font-size: 14px;
+    line-height: 14px;
+}
+.book_order .hotel_info dd h3 {
+    margin-bottom: 8px;
+    color: #333333;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+}
+.book_order .hotel_info dd h3 a {
+    color: #333333;
+}
+a {
+    color: #555;
+    text-decoration: none;
+}
+.book_order .hotel_info dd p {
+    color: #999999;
+    font-size: 12px;
+    line-height: 20px;
+}
+.book_order .hotel_info dd {
+    padding: 15px 0 8px;
+    margin: 0 10px;
+    border-bottom: 1px dashed #dddddd;
+}
+.book_order .hotel_info .bed_inf h3 {
+    margin-bottom: 6px;
+}
+.book_order .hotel_info dd h3 {
+    margin-bottom: 8px;
+    color: #333333;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+}
+dd {
+    display: block;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.book_order .hotel_info dd li {
+    float: left;
+    width: 50%;
+    color: #999999;
+    line-height: 24px;
+}
+.book_order .hotel_info dd li em {
+    color: #333333;
+}
+em, i {
+    font-style: normal;
+}
+.book_order .hotel_info .prompt {
+    border-bottom: none;
+}
+.book_order .hotel_info dd {
+    padding: 15px 0 8px;
+    margin: 0 10px;
+    border-bottom: 1px dashed #dddddd;
+}
+.book_order .hotel_info dd h3 {
+    margin-bottom: 8px;
+    color: #333333;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+}
+.book_order .hotel_info .prompt p {
+    color: #ff3300;
+}
+.book_order .hotel_info dd p {
+    color: #999999;
+    font-size: 12px;
+    line-height: 20px;
+}
+.book_order .hotel_info .money {
+    height: 55px;
+    margin: 0;
+    padding: 0 9px;
+    border-bottom: none;
+    background: #fffce5;
+    color: #333333;
+    font-size: 18px;
+    line-height: 55px;
+}
+.book_order .hotel_info .money strong {
+    float: right;
+    color: #ff3300;
+    font-size: 30px;
+    font-weight: normal;
+}
+.book_order .hotel_info .money strong b {
+    font-size: 14px;
+    font-weight: normal;
+}
+/*.warp1000 .book_order .sideCon {*/
+    /*width: 678px;*/
+/*}*/
+.book_order .sideCon {
+
+    margin-top: 15px;
+    float: right;
+    width: 878px;
+    border: 1px solid #dddddd;
+    background: #fff;
+}
+.orderCon {
+
+    margin: 40px;
+}
+.orderCon span, .orderCon label
+{
+    font-size: 14px;
+}
+.price {
+    color: #ff3300;
+    font-size: 38px;
+}
+.complete {
+    padding: 0 38px;
+    margin-right: 10px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: "microsoft yahei", arial;
+    line-height: 35px;
+    background: #ff9911;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.firstP {
+    margin-bottom: 30px;
+}
+.inputStyle {
+    width: 230px;
+    height: 34px;
+    padding: 0 5px;
+    margin-right: 10px;
+    border: 1px solid #dddddd;
+    line-height: 24px;
+    outline: none;
+    display: inline-block;
+}
+.roomSelect {
+
+    width: 98px;
+    height: 24px;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+

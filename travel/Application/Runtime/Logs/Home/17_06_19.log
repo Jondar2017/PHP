@@ -1,0 +1,126 @@
+[ 2017-06-19T12:42:42+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name FROM `travel_hotel` `hotel`,`travel_city` `city` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  ) LIMIT 10  
+
+[ 2017-06-19T12:51:08+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name FROM `travel_hotel` `hotel`,`travel_city` `city` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  ) LIMIT 10  
+
+[ 2017-06-19T12:57:24+08:00 ] ::1 /travel/index.php/Home/Hotel/index.html
+ERR: 1054:Unknown column 'hotel.id' in 'field list'
+ [ SQL语句 ] : SELECT hotel.id,hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name FROM `travel_hotel` `hotel`,`travel_city` `city` WHERE ( hotel.hotel_city_id = city.id and hotel.hotel_city_id = 1 ) LIMIT 12  
+
+[ 2017-06-19T13:06:46+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1.html
+ERR: 1146:Table 'db_travel.travel_hotel_intro' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `travel_hotel_intro`
+
+[ 2017-06-19T13:08:56+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1.html
+ERR: 1146:Table 'db_travel.travel_hotel_intro' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `travel_hotel_intro`
+
+[ 2017-06-19T13:09:17+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1.html
+ERR: 1146:Table 'db_travel.travel_hotel_intro' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `travel_hotel_intro`
+
+[ 2017-06-19T15:26:33+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1.html
+ERR: 1146:Table 'db_travel.travel_hotel_intro' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `travel_hotel_intro`
+
+[ 2017-06-19T15:26:35+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1.html
+ERR: 1146:Table 'db_travel.travel_hotel_intro' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `travel_hotel_intro`
+
+[ 2017-06-19T15:26:40+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1.html
+ERR: 1146:Table 'db_travel.travel_hotel_intro' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `travel_hotel_intro`
+
+[ 2017-06-19T15:28:11+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1.html
+ERR: 1146:Table 'db_travel.travel_hotel_intro' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `travel_hotel_intro`
+
+[ 2017-06-19T15:29:35+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1.html
+ERR: 1146:Table 'db_travel.travel_hotel_intro' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `travel_hotel_intro`
+
+[ 2017-06-19T20:51:06+08:00 ] ::1 /travel/index.php/Home/Hotel/cityHotel
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 10' at line 2
+ [ SQL语句 ] : SELECT hotel.hotel_name,hotel.hotel_type,hotel.hotel_price,hotel.hotel_addr,city.name FROM `travel_hotel` `hotel`,`travel_city` `city` WHERE ( hotel.hotel_city_id = city.id and hotel_type = '' 
+            and hotel.hotel_city_id =  ) LIMIT 10  
+
+[ 2017-06-19T21:34:51+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1/city/Order/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001430s ]
+SQL: SHOW COLUMNS FROM `travel_hotel_intro` [ RunTime:0.0089s ]
+SQL: SELECT `hotel_desc` FROM `travel_hotel_intro` WHERE `hotel_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `travel_hotel_facilities` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `travel_hotel_facilities` WHERE `hotel_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `travel_room` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `travel_room` WHERE `hotel_id` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0159s ]
+SQL: SELECT `hotel_name`,`hotel_addr` FROM `travel_hotel` WHERE `hotel_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000270s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000450s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000982s ]
+
+[ 2017-06-19T21:34:53+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1/city/:%7BU('Order/Order/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001006s ]
+SQL: SHOW COLUMNS FROM `travel_hotel_intro` [ RunTime:0.0057s ]
+SQL: SELECT `hotel_desc` FROM `travel_hotel_intro` WHERE `hotel_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_hotel_facilities` [ RunTime:0.0135s ]
+SQL: SELECT * FROM `travel_hotel_facilities` WHERE `hotel_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `travel_room` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `travel_room` WHERE `hotel_id` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0092s ]
+SQL: SELECT `hotel_name`,`hotel_addr` FROM `travel_hotel` WHERE `hotel_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000440s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000829s ]
+
+[ 2017-06-19T21:36:06+08:00 ] ::1 /travel/index.php/Home/HotelDesc/index/id/1/city/Order/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+SQL: SHOW COLUMNS FROM `travel_hotel_intro` [ RunTime:0.0064s ]
+SQL: SELECT `hotel_desc` FROM `travel_hotel_intro` WHERE `hotel_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_hotel_facilities` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `travel_hotel_facilities` WHERE `hotel_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `travel_room` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `travel_room` WHERE `hotel_id` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `travel_hotel` [ RunTime:0.0062s ]
+SQL: SELECT `hotel_name`,`hotel_addr` FROM `travel_hotel` WHERE `hotel_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087994s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001129s ]
+

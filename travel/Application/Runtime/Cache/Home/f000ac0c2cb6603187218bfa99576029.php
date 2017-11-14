@@ -1,0 +1,344 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单显示</title>
+    <link rel="stylesheet" href="/travel/Public/Home/Css/date/font-awesome.min.css">
+    <link rel="stylesheet" href="/travel/Public/Home/Css/date/foundation-datepicker.css">
+    <link rel="stylesheet" href="/travel/Public/Home/Css/signorder/signorder.css">
+    <script src="/travel/Public/Home/Js/jquery.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <a href="" title="美好旅程，从途牛旅游开始"></a>
+    </div>
+    <span class="saying">美好旅程，从途牛开始</span>
+    <div class="quick_menu">
+        <ul>
+            <li>
+                <span id="top_user">
+                    您好，&nbsp;&nbsp;<a href="" class="oldUserLogin" style="cursor:pointer;">请登录</a>&nbsp;&nbsp;<a href="" target="_blank">免费注册</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="couponPopu" id="couponPopu" style="display: none;">
+    <span class="loginTips" style="display: none;">用户名或密码不能为空</span>
+    <p>
+        <input type="text" name="username" value="请输入用户名" class="inputText">
+    </p>
+    <p>
+        <input type="text" value="请输入密码" class="inputPwd noPwd" style="display: block">
+        <input type="password" value name="password" class="inputPwd relPwd" style="display: none;">
+    </p>
+    <div class="forward">
+        <a href="" target="_blank">忘记密码？</a>
+    </div>
+    <div class="counponSubmit">
+        <a href="" id="user_login">登录</a>
+    </div>
+    <div class="forward">
+        您还不是途牛会员？<a href="" target="_blank">免费注册</a>
+    </div>
+    <i class="couponPopuClose"></i>
+
+</div>
+<div class="popuBlack" id="popuBlack" style="display: none;"></div>
+<script>
+    $(function(){
+        $(".oldUserLogin").click(function(){
+            $("#couponPopu").css("display", "block");
+            $(".popuBlack").css("display", "block");
+            return false;
+        });
+        $(".couponPopuClose").click(function(){
+            $("#couponPopu").css("display", "none");
+            $(".popuBlack").css("display", "none");
+        });
+        $(".noPwd").focus(function(){
+            $(this).css("display", "none");
+            $(".relPwd").css("display", "block");
+        });
+    });
+</script>
+<div class="content">
+    <div class="main">
+        <form action="<?php echo U('Home/SignOrder/order');?>" method="post" id="form">
+            <div class="form_con">
+                <!--<input type="hidden" name="product_no" value="">-->
+
+               <?php if(is_array($tickets)): foreach($tickets as $key=>$v): ?><input type="hidden" name="view_id" value="<?php echo ($v["view_id"]); ?>">
+                   <input type="hidden" name="view_name" value="<?php echo ($view_name); ?>">
+                   <div class="tit">
+                       <strong><?php echo ($view_name); ?></strong>
+                       <em>订单信息</em>
+                       <a href="<?php echo U('Home/Sign/desc?view_id='.$v['view_id']);?>" class="more">重新选择</a>
+                   </div>
+                   <dl class="txt">
+                       <dl>
+                           <dt>门票名称：</dt>
+                           <dd>
+                               <strong class="title"><?php echo ($v["ticket_title"]); ?></strong>
+                               <div class="name_pro">
+                                   <s>◆</s>
+                                   入园方式<br/>
+                                   <p style="color:#999; padding-bottom: 8px;">请您凭身份证入园地方地方大幅度发方法电放费地方</p>
+                                   包含项目
+                                   <br/>
+                                   <p style="color:#999;">
+                                       深圳之窗成人票一张。
+                                       <br/>
+                                       ①游玩当天..............
+                                       <br/>
+                                       ②景区不提供.....
+                                       <br/>
+                                       ③由于景区系统限制......
+                                   </p>
+                                   预定说明
+                                   <br/>
+                                   <p style="color:#999">
+                                       （1）最晚游玩.....
+                                       <br/>
+                                       (2)本产品一经预定.....
+                                   </p>
+                               </div>
+                           </dd>
+                       </dl>
+                       <dl>
+                           <dt>门票价格：</dt>
+                           <dd>
+                               <span class="price">￥<b><?php echo ($v["ticket_price"]); ?></b></span>
+                           </dd>
+                       </dl>
+                       <dl>
+                           <dt>游玩日期：</dt>
+                           <dd>
+                               <input type="hidden" id="today" value="">
+                               <label class="input_order_date J_input_date">
+                                   <input type="text" id="start_time" name="travel_date" value="">
+                               </label>
+                           </dd>
+                       </dl>
+
+                       <script src="/travel/Public/Home/Js/date/jquery-1.11.3.min.js"></script>
+                       <script src="/travel/Public/Home/Js/date/foundation-datepicker.js"></script>
+                       <script src="/travel/Public/Home/Js/date/locales/foundation-datepicker.zh-CN.js"></script>
+                       <script>
+                           //获取当前时间，格式YYYY-MM-DD
+                           function getNowFormatDate() {
+                               var date = new Date();
+                               var seperator1 = "-";
+                               var year = date.getFullYear();
+                               var month = date.getMonth() + 1;
+                               var strDate = date.getDate()+ 1;
+                               if (month >= 1 && month <= 9) {
+                                   month = "0" + month;
+                               }
+                               if (strDate >= 0 && strDate <= 9) {
+                                   strDate = "0" + strDate;
+                               }
+                               var currentdate = year + seperator1 + month + seperator1 + strDate;
+                               return currentdate;
+                           }
+                           var today = getNowFormatDate();
+                           var riqi = document.getElementById("start_time");
+                           riqi.value = today;
+
+                           //获取日历
+                           var nowTemp = new Date();
+                           var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate()+1, 0, 0, 0, 0);
+                           var checkin = $('#start_time').fdatepicker({
+                               format: 'yyyy-mm-dd',
+                               onRender: function (date) {
+                                   return date.valueOf() <= now.valueOf() ? 'disabled' : '';
+                               }
+                           }).on('changeDate', function (ev) {
+                               checkin.hide();
+                           }).data('datepicker');
+
+                       </script>
+                       <dl>
+                           <dt>门票数量：</dt>
+                           <dd>
+                               <div class="operate_num">
+                                   <s class="sub disabled" minamt="1"></s>
+                                   <input type="hidden" name="ticket_name" id="ticket_name" value="<?php echo ($v["ticket_title"]); ?>">
+                                   <input type="hidden" name="total_price" id="total_price" value="<?php echo ($v["ticket_price"]); ?>">
+                                   <input type="hidden" name="ticket_price" id="ticket_price" value="<?php echo ($v["ticket_price"]); ?>">
+                                   <input type="text" class="text text25" maxlength="2" id="ticket_num" value="1" name="num">
+                                   <s class="add" maxamt="5"></s>
+                                   <font class="diy_error" id="font_error" style="display:none;">一张起订，最多可订五张</font>
+                               </div>
+                           </dd>
+                       </dl>
+                       <div class="fn-clear"></div>
+                       <div class="line"></div>
+                       <dl class="price_all">
+                           <dt>订单金额：</dt>
+                           <dd>
+                               <span class="price">￥<b id="total_price_s"><?php echo ($v["ticket_price"]); ?></b></span>
+                            <span style="display: inline-block; padding: 16px 0 0 10px; color:#999;">
+                                （含<?php echo ($v["ticket_title"]); ?>x
+                                <font id="popleNum">1</font>
+                                )
+                            </span>
+                           </dd>
+                       </dl>
+                       <div class="insert_list" style="display:none;"></div>
+                   </dl><?php endforeach; endif; ?>
+            </div>
+
+            <script>
+                $(function(){
+                    var ticket = $(".operate_num #ticket_num");
+                    var num = ticket.val();
+                    if (num >= 2){
+                        $(".operate_num s.disabled").css("background-position", "6px -14px")
+                    }
+                    $(".operate_num s.disabled").click(function(){
+                        var num = ticket.val();
+                        num--;
+                        $(".operate_num #ticket_num").val(num);
+                        $("#popleNum").html(num);
+                        $("#ticket_price").val(num);
+                        $(".operate_num #font_error").css("display", "none");
+                        if(num <= 1){
+                            ticket.val(1);
+                            $("#popleNum").html(1);
+                            $("#ticket_price").val(1);
+                            $(this).css("background-position", "6px 2px");
+                        }
+                        total_price();
+                    });
+
+                    $(".operate_num s.add").click(function(){
+                        var now_num = ticket.val();
+                        if(now_num >= 5){
+                            $(".operate_num #font_error").css("display", "inline-block");
+                            ticket.val(5);
+                            $("#popleNum").html(5);
+                            $("#ticket_price").val(5);
+                        } else {
+                            now_num++;
+                            ticket.val(now_num);
+                            $("#popleNum").html(now_num);
+                            $("#ticket_price").val(now_num);
+                            $(".operate_num s.disabled").css("background-position", "6px -14px");
+                        }
+                        total_price();
+                    });
+
+
+                    //获取景点总价格
+                    function total_price(){
+                        var price = $(".price b").html();
+                        var ticket_nums = ticket.val();
+                        var totalPrice = price * ticket_nums;
+                        $("#total_price_s").html(totalPrice);
+                        $("#total_price").val(totalPrice);
+                    }
+                })
+            </script>
+
+
+            <div class="form_con">
+                <div class="tit">
+                    <strong>取票人信息</strong>
+                    <span>（作为预订和取票凭证，请认真填写真实信息）</span>
+                </div>
+                <div class="txt" id="inputAddTxt">
+                    <dl>
+                        <dt>取票人：<em>*</em></dt>
+                        <dd>
+                            <input type="text" class="text j_yz_bt" id="username" data-bt="此处姓名不能为空" onblur="check_username(this);" onfocus="foucusInput(this);" name="link_man" placeholder="需与所持证件一致" value>
+                            <span class="diy_error" style="display: none;">此处姓名不能为空</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>手机号码：<em>*</em></dt>
+                        <dd>
+                            <input type="text" class="text" id="phone" onblur="check_phone(this);" onfocus="focusInput2(this);" name="link_phone" placeholder="接收订单短信或者电子码" value>
+                            <span class="diy_error" style="display: none;">请正确填写手机号码</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="submit_con">
+                <button type="button" class="submit" onclick="check_submit()">提交订单</button>
+                <div class="tip">
+                    <i>◆</i>
+                    <s>◆</s>
+                    订单提交并进行在线支付，成功后至景点指定窗口取票游玩。
+                </div>
+            </div>
+        </form>
+
+        <script>
+
+            //当姓名文本框鼠标焦点失去时
+            function check_username(name){
+                var val = name.value;
+                var name_error = document.getElementsByClassName("diy_error")[1];
+                if (val == ""){
+                    name_error.style.display = "inline-block";
+                } else {
+                    name_error.style.display = "none";
+                }
+            }
+
+            //当姓名文本框获得鼠标焦点时
+            function focusInput1(name){
+                var val = name.value;
+                var name_error = documend.getElementsByClassName("diy_error")[1];
+                if (val != ""){
+                    name_error.style.display = "none";
+                }
+            }
+
+            //当手机文本框鼠标失去焦点时
+            function check_phone(phone){
+                var val = phone.value;
+                var phone_error = document.getElementsByClassName("diy_error")[2];
+                if (!(/^1[3|4|5|8][0-9]\d{8}$/.test(val))){
+                    phone_error.style.display = "inline-block";
+                } else {
+                    phone_error.style.display = "none";
+                }
+            }
+
+            //当手机文本框获得焦点时
+            function focusInput2(phone){
+                var val = phone.value;
+                var phone_error = document.getElementsByClassName("diy_error")[2];
+                if(/^1[3|4|5|8][0-9]\d{8}$/.test(val)){
+                    phone_error.style.display = "none";
+                }
+            }
+
+
+            //当点击确认订单时
+            function check_submit(){
+                var username = document.getElementById("username").value;
+                var phone = document.getElementById("phone").value;
+                var name_error = document.getElementsByClassName("diy_error")[1];
+                var phone_error = document.getElementsByClassName("diy_error")[2];
+
+                if (username == ""){
+                    name_error.style.display = "inline-block";
+                    if (!(/^1[3|4|5|8][0-9]\d{8}$/.test(username))){
+                        phone_error.style.display = "inline-block";
+                    }
+
+                } else if (!(/^1[3|4|5|8][0-9]\d{8}$/.test(phone))){
+                    phone_error.style.display = "inline-block";
+
+                } else {
+                    var form = document.getElementById("form");
+                    form.submit();
+                }
+            }
+        </script>
+    </div>
+</div>
